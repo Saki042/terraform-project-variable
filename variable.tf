@@ -12,3 +12,17 @@ variable "content_map" {
    "content2" = "this is map value 2"
 }
 }
+variable "aws_ec2_object"{
+    type =  object({
+        name = string
+        instances =  number
+        keys = list(string)
+        ami = string
+})
+default = {
+    name = "test_ec2_instance"
+    instances = 2
+    keys = ["key1.pem","key2.pem"]
+    ami = "ubuntu-abcdefghijklm"
+}
+}

@@ -12,3 +12,6 @@ resource "local_file" "var1" {
  filename = "/root/terraform/terraform-variables/file_with_vairbale_map.txt"
  content = var.content_map["content1"]
 }
+output "aws_ec2_info" {
+value = var.aws_ec2_object.instances
+}
